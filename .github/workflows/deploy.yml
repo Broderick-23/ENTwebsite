@@ -30,7 +30,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm' # 启用 npm 缓存以加速安装
+          # cache: 'npm' 启用 npm 缓存以加速安装
 
       - name: Install Dependencies 
         # 安装项目依赖
