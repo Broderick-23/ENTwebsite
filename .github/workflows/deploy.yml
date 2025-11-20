@@ -54,3 +54,6 @@ jobs:
         # 使用官方部署 Action 将产物部署到 GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # Vite 的默认构建输出目录
+          artifact_path: './dist'
