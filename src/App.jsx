@@ -19,7 +19,7 @@ const App = () => {
     screens: {
       // 已更新为新的图片链接
       home: "https://cdn.jsdelivr.net/gh/Broderick-23/ENTwebsite@main/home.jpg",
-      ai: "https://cdn.jsdelivr.net/gh/Broderick-23/ENTwebsite@main/AI_assistant.png",
+      ai: "https://cdn.jsdelivr.net/gh/Broderick-23/ENTwebsite@main/AI.png",
       discover: "https://cdn.jsdelivr.net/gh/Broderick-23/ENTwebsite@main/finding.png",
       profile: "https://cdn.jsdelivr.net/gh/Broderick-23/ENTwebsite@main/profile.png"
     }
