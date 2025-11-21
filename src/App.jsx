@@ -7,11 +7,14 @@ import {
   Sun, 
   CheckCircle2,
   Download,
-  Smile
+  Smile,
+  Globe
 } from 'lucide-react';
+import { useLanguage } from './contexts/LanguageContext';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('home');
+  const { language, setLanguage, t } = useLanguage();
 
   // 图片资源配置
   const assets = {
@@ -92,15 +95,27 @@ const App = () => {
           </div>
           
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" onClick={(e) => handleScroll(e, 'features')} className="text-gray-600 hover:text-orange-500 font-medium transition">功能特色</a>
-            <a href="#demo" onClick={(e) => handleScroll(e, 'demo')} className="text-gray-600 hover:text-orange-500 font-medium transition">APP 预览</a>
-            <a href="#mission" onClick={(e) => handleScroll(e, 'mission')} className="text-gray-600 hover:text-orange-500 font-medium transition">关于我们</a>
+            <a href="#features" onClick={(e) => handleScroll(e, 'features')} className="text-gray-600 hover:text-orange-500 font-medium transition">{t('nav.features')}</a>
+            <a href="#demo" onClick={(e) => handleScroll(e, 'demo')} className="text-gray-600 hover:text-orange-500 font-medium transition">{t('nav.demo')}</a>
+            <a href="#mission" onClick={(e) => handleScroll(e, 'mission')} className="text-gray-600 hover:text-orange-500 font-medium transition">{t('nav.mission')}</a>
           </div>
 
-          <button className="bg-gray-900 hover:bg-black text-white px-6 py-2.5 rounded-full font-medium transition transform hover:scale-105 flex items-center gap-2">
-            <Download className="w-4 h-4" />
-            下载 APP
-          </button>
+          <div className="flex items-center gap-4">
+            {/* 语言切换按钮 */}
+            <button 
+              onClick={() => setLanguage(language === 'zh-CN' ? 'en-US' : 'zh-CN')}
+              className="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-gray-100 transition text-gray-600 hover:text-orange-500"
+              title={language === 'zh-CN' ? 'Switch to English' : '切换到中文'}
+            >
+              <Globe className="w-5 h-5" />
+              <span className="text-sm font-medium">{language === 'zh-CN' ? 'EN' : '中'}</span>
+            </button>
+
+            <button className="bg-gray-900 hover:bg-black text-white px-6 py-2.5 rounded-full font-medium transition transform hover:scale-105 flex items-center gap-2">
+              <Download className="w-4 h-4" />
+              {t('nav.download')}
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -108,15 +123,14 @@ const App = () => {
       <section className="pt-32 pb-20 px-6 bg-sky-50 rounded-b-[3rem]">
         <div className="max-w-6xl mx-auto text-center">
           <div className="inline-block px-4 py-1.5 bg-white rounded-full text-sky-600 text-sm font-semibold mb-6 shadow-sm border border-sky-100 animate-fade-in-up">
-            专为中国大学生打造的心理健康伙伴
+            {t('hero.badge')}
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-normal animate-fade-in-up delay-100">
-            Thoughts Heard, <br />
-            <span className="text-sky-500">Mind Nurtured.</span>
+            {t('hero.title1')} <br />
+            <span className="text-sky-500">{t('hero.title2')}</span>
           </h1>
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-200">
-            倾听你的心声，抚慰你的心灵。Xinyue 结合先进 AI 技术与专业心理学，
-            在那些感到压力的时刻，为你提供一个温暖的出口。
+            {t('hero.description')}
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 animate-fade-in-up delay-300">
              <a 
@@ -125,10 +139,10 @@ const App = () => {
                rel="noopener noreferrer"
                className="bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-full font-bold text-lg transition shadow-lg shadow-sky-200 transform hover:-translate-y-1 w-full md:w-auto flex items-center justify-center"
              >
-              开始免费测评
+              {t('hero.startTest')}
             </a>
              <button className="bg-white hover:bg-gray-50 text-gray-700 border border-gray-200 px-8 py-4 rounded-full font-bold text-lg transition w-full md:w-auto">
-              了解更多
+              {t('hero.learnMore')}
             </button>
           </div>
         </div>
@@ -138,8 +152,8 @@ const App = () => {
       <section id="features" className="py-24 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">为什么选择 Xinyue？</h2>
-            <p className="text-gray-600">三大核心功能，不仅是工具，更是你口袋里的心理咨询师。</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('features.title')}</h2>
+            <p className="text-gray-600">{t('features.subtitle')}</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -147,9 +161,9 @@ const App = () => {
               <div className="w-14 h-14 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
                 <Sun className="w-8 h-8 text-yellow-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">即时心情记录</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{t('features.mood.title')}</h3>
               <p className="text-gray-600 leading-relaxed">
-                无需复杂的文字，只需轻点几下，即可记录当下的情绪。系统会自动生成属于你的“情绪日记”，帮你觉察内心变化。
+                {t('features.mood.description')}
               </p>
             </div>
 
@@ -157,9 +171,9 @@ const App = () => {
               <div className="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
                 <MessageCircle className="w-8 h-8 text-teal-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">AI 深度交互</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{t('features.ai.title')}</h3>
               <p className="text-gray-600 leading-relaxed">
-                先进的 NLP 技术让 AI 读懂你的言外之意。通过多轮递进式对话，精准捕捉影响你情绪的因子，并给出温暖的建议。
+                {t('features.ai.description')}
               </p>
             </div>
 
@@ -167,9 +181,9 @@ const App = () => {
               <div className="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
                 <CheckCircle2 className="w-8 h-8 text-purple-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">专业心理支持</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{t('features.support.title')}</h3>
               <p className="text-gray-600 leading-relaxed">
-                除了 AI 陪伴，我们还连接了海量专业心理测评与认证心理医生，在需要时为你提供更深度的专业帮助。
+                {t('features.support.description')}
               </p>
             </div>
           </div>
@@ -183,9 +197,9 @@ const App = () => {
           {/* Left: Controls */}
           <div className="lg:w-1/2 space-y-8 order-2 lg:order-1">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              四个维度，<br/>全方位守护你的内心
+              {t('demo.title1')}<br/>{t('demo.title2')}
             </h2>
-            <p className="text-gray-600">点击下方按钮，预览 Xinyue APP 的不同功能模块。</p>
+            <p className="text-gray-600">{t('demo.subtitle')}</p>
             
             <div className="grid grid-cols-1 gap-4">
               <button 
@@ -196,8 +210,8 @@ const App = () => {
                   <Heart className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-lg">首页 · 即时记录</h4>
-                  <p className="text-sm text-gray-500">轻松记录心情事件，获取即时个性化建议。</p>
+                  <h4 className="font-bold text-lg">{t('demo.tabs.home.title')}</h4>
+                  <p className="text-sm text-gray-500">{t('demo.tabs.home.description')}</p>
                 </div>
               </button>
 
@@ -209,8 +223,8 @@ const App = () => {
                   <MessageCircle className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-lg">AI 助手 · 深度陪伴</h4>
-                  <p className="text-sm text-gray-500">递进式问答捕捉情绪因子，给予正向干预。</p>
+                  <h4 className="font-bold text-lg">{t('demo.tabs.ai.title')}</h4>
+                  <p className="text-sm text-gray-500">{t('demo.tabs.ai.description')}</p>
                 </div>
               </button>
 
@@ -222,8 +236,8 @@ const App = () => {
                   <Compass className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-lg">发现 · 专业支持</h4>
-                  <p className="text-sm text-gray-500">AI 推荐的专业测评题与心理医生咨询服务。</p>
+                  <h4 className="font-bold text-lg">{t('demo.tabs.discover.title')}</h4>
+                  <p className="text-sm text-gray-500">{t('demo.tabs.discover.description')}</p>
                 </div>
               </button>
 
@@ -235,8 +249,8 @@ const App = () => {
                   <User className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-lg">个人中心 · 历史曲线</h4>
-                  <p className="text-sm text-gray-500">可视化查看自己的情绪变化历史。</p>
+                  <h4 className="font-bold text-lg">{t('demo.tabs.profile.title')}</h4>
+                  <p className="text-sm text-gray-500">{t('demo.tabs.profile.description')}</p>
                 </div>
               </button>
             </div>
@@ -267,12 +281,11 @@ const App = () => {
            <div className="w-16 h-16 bg-orange-200 rounded-full flex items-center justify-center mx-auto mb-6 text-orange-700">
              <Smile className="w-8 h-8" />
            </div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">如果你感到疲惫，没关系的</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">{t('mission.title')}</h2>
           <p className="text-lg text-gray-600 leading-loose">
-            面对繁重的学业、复杂的社交关系，以及对未来的迷茫，中国大学生的心理压力日益增长。
-            我们深知这种“孤岛”般的感受。Xinyue 的诞生，就是为了利用先进的 AI 技术，
-            对潜在的心理困扰进行<span className="bg-orange-100 px-1 text-orange-700 font-bold rounded mx-1">正向干预</span>。
-            我们希望当你每次打开 APP，都能感受到一种被接纳、被理解的温暖。我们不是冷冰冰的机器，而是你心灵花园的守护者。
+            {t('mission.description')}
+            <span className="bg-orange-100 px-1 text-orange-700 font-bold rounded mx-1">{t('mission.highlight')}</span>
+            {t('mission.description2')}
           </p>
         </div>
       </section>
@@ -289,17 +302,17 @@ const App = () => {
               />
               <span className="text-2xl font-bold">Xinyue</span>
             </div>
-            <p className="text-gray-400 text-sm">Thoughts Heard, Mind Nurtured.</p>
+            <p className="text-gray-400 text-sm">{t('footer.tagline')}</p>
           </div>
           
           <div className="flex gap-8 text-sm text-gray-400">
-            <a href="#" className="hover:text-white transition">隐私政策</a>
-            <a href="#" className="hover:text-white transition">用户协议</a>
-            <a href="#" className="hover:text-white transition">联系我们</a>
+            <a href="#" className="hover:text-white transition">{t('footer.privacy')}</a>
+            <a href="#" className="hover:text-white transition">{t('footer.terms')}</a>
+            <a href="#" className="hover:text-white transition">{t('footer.contact')}</a>
           </div>
 
           <div className="text-gray-500 text-sm">
-            &copy; 2023 Xinyue Health. All rights reserved.
+            {t('footer.copyright')}
           </div>
         </div>
       </footer>

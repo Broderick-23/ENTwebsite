@@ -1,0 +1,68 @@
+{
+  "nav": {
+    "features": "功能特色",
+    "demo": "APP 预览",
+    "mission": "关于我们",
+    "download": "下载 APP"
+  },
+  "hero": {
+    "badge": "专为中国大学生打造的心理健康伙伴",
+    "title1": "Thoughts Heard,",
+    "title2": "Mind Nurtured.",
+    "description": "倾听你的心声，抚慰你的心灵。Xinyue 结合先进 AI 技术与专业心理学，在那些感到压力的时刻，为你提供一个温暖的出口。",
+    "startTest": "开始免费测评",
+    "learnMore": "了解更多"
+  },
+  "features": {
+    "title": "为什么选择 Xinyue？",
+    "subtitle": "三大核心功能，不仅是工具，更是你口袋里的心理咨询师。",
+    "mood": {
+      "title": "即时心情记录",
+      "description": "无需复杂的文字，只需轻点几下，即可记录当下的情绪。系统会自动生成属于你的\"情绪日记\"，帮你觉察内心变化。"
+    },
+    "ai": {
+      "title": "AI 深度交互",
+      "description": "先进的 NLP 技术让 AI 读懂你的言外之意。通过多轮递进式对话，精准捕捉影响你情绪的因子，并给出温暖的建议。"
+    },
+    "support": {
+      "title": "专业心理支持",
+      "description": "除了 AI 陪伴，我们还连接了海量专业心理测评与认证心理医生，在需要时为你提供更深度的专业帮助。"
+    }
+  },
+  "demo": {
+    "title1": "四个维度，",
+    "title2": "全方位守护你的内心",
+    "subtitle": "点击下方按钮，预览 Xinyue APP 的不同功能模块。",
+    "tabs": {
+      "home": {
+        "title": "首页 · 即时记录",
+        "description": "轻松记录心情事件，获取即时个性化建议。"
+      },
+      "ai": {
+        "title": "AI 助手 · 深度陪伴",
+        "description": "递进式问答捕捉情绪因子，给予正向干预。"
+      },
+      "discover": {
+        "title": "发现 · 专业支持",
+        "description": "AI 推荐的专业测评题与心理医生咨询服务。"
+      },
+      "profile": {
+        "title": "个人中心 · 历史曲线",
+        "description": "可视化查看自己的情绪变化历史。"
+      }
+    }
+  },
+  "mission": {
+    "title": "如果你感到疲惫，没关系的",
+    "description": "面对繁重的学业、复杂的社交关系，以及对未来的迷茫，中国大学生的心理压力日益增长。我们深知这种\"孤岛\"般的感受。Xinyue 的诞生，就是为了利用先进的 AI 技术，对潜在的心理困扰进行",
+    "highlight": "正向干预",
+    "description2": "。我们希望当你每次打开 APP，都能感受到一种被接纳、被理解的温暖。我们不是冷冰冰的机器，而是你心灵花园的守护者。"
+  },
+  "footer": {
+    "tagline": "Thoughts Heard, Mind Nurtured.",
+    "privacy": "隐私政策",
+    "terms": "用户协议",
+    "contact": "联系我们",
+    "copyright": "© 2023 Xinyue Health. All rights reserved."
+  }
+}

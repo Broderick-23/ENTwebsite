@@ -1,0 +1,68 @@
+{
+  "nav": {
+    "features": "Features",
+    "demo": "APP Preview",
+    "mission": "About Us",
+    "download": "Download APP"
+  },
+  "hero": {
+    "badge": "Mental Health Partner for Chinese College Students",
+    "title1": "Thoughts Heard,",
+    "title2": "Mind Nurtured.",
+    "description": "Listen to your voice, nurture your mind. Xinyue combines advanced AI technology with professional psychology to provide you with a warm outlet during stressful moments.",
+    "startTest": "Start Free Assessment",
+    "learnMore": "Learn More"
+  },
+  "features": {
+    "title": "Why Choose Xinyue?",
+    "subtitle": "Three core features, not just a tool, but your pocket psychological counselor.",
+    "mood": {
+      "title": "Instant Mood Recording",
+      "description": "No need for complex text, just a few taps to record your current emotions. The system will automatically generate your personal 'mood diary' to help you become aware of inner changes."
+    },
+    "ai": {
+      "title": "AI Deep Interaction",
+      "description": "Advanced NLP technology allows AI to understand your implications. Through multi-round progressive dialogue, accurately capture emotional factors and provide warm suggestions."
+    },
+    "support": {
+      "title": "Professional Psychological Support",
+      "description": "In addition to AI companionship, we connect you with extensive professional psychological assessments and certified psychologists to provide deeper professional help when needed."
+    }
+  },
+  "demo": {
+    "title1": "Four Dimensions,",
+    "title2": "Comprehensive Care for Your Mind",
+    "subtitle": "Click the buttons below to preview different functional modules of Xinyue APP.",
+    "tabs": {
+      "home": {
+        "title": "Home · Instant Recording",
+        "description": "Easily record mood events and get instant personalized advice."
+      },
+      "ai": {
+        "title": "AI Assistant · Deep Companionship",
+        "description": "Progressive Q&A captures emotional factors and provides positive intervention."
+      },
+      "discover": {
+        "title": "Discover · Professional Support",
+        "description": "AI-recommended professional assessment questions and psychological counseling services."
+      },
+      "profile": {
+        "title": "Profile · History Curve",
+        "description": "Visualize your emotional change history."
+      }
+    }
+  },
+  "mission": {
+    "title": "If you feel tired, it's okay",
+    "description": "Facing heavy academic workload, complex social relationships, and confusion about the future, Chinese college students' psychological pressure is increasing. We deeply understand this sense of 'isolation'. Xinyue was created to use advanced AI technology to provide",
+    "highlight": "positive intervention",
+    "description2": "for potential psychological distress. We hope that every time you open the APP, you can feel a sense of acceptance and understanding. We are not cold machines, but guardians of your spiritual garden."
+  },
+  "footer": {
+    "tagline": "Thoughts Heard, Mind Nurtured.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact Us",
+    "copyright": "© 2023 Xinyue Health. All rights reserved."
+  }
+}
