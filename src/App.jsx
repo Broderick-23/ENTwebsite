@@ -185,7 +185,7 @@ const App = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
               四个维度，<br/>全方位守护你的内心
             </h2>
-            <p className="text-gray-600">点击下方按钮，预览 MT APP 的不同功能模块。</p>
+            <p className="text-gray-600">点击下方按钮，预览 Xinyue APP 的不同功能模块。</p>
             
             <div className="grid grid-cols-1 gap-4">
               <button 
@@ -270,7 +270,7 @@ const App = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-8">如果你感到疲惫，没关系的</h2>
           <p className="text-lg text-gray-600 leading-loose">
             面对繁重的学业、复杂的社交关系，以及对未来的迷茫，中国大学生的心理压力日益增长。
-            我们深知这种“孤岛”般的感受。MT 的诞生，就是为了利用先进的 AI 技术，
+            我们深知这种“孤岛”般的感受。Xinyue 的诞生，就是为了利用先进的 AI 技术，
             对潜在的心理困扰进行<span className="bg-orange-100 px-1 text-orange-700 font-bold rounded mx-1">正向干预</span>。
             我们希望当你每次打开 APP，都能感受到一种被接纳、被理解的温暖。我们不是冷冰冰的机器，而是你心灵花园的守护者。
           </p>
@@ -284,10 +284,10 @@ const App = () => {
              <div className="flex items-center gap-3 mb-4">
               <img 
                 src={assets.logo} 
-                alt="MT Logo" 
+                alt="Xinyue Logo" 
                 className="w-8 h-8 rounded-full object-cover"
               />
-              <span className="text-2xl font-bold">MT</span>
+              <span className="text-2xl font-bold">Xinyue</span>
             </div>
             <p className="text-gray-400 text-sm">Thoughts Heard, Mind Nurtured.</p>
           </div>
@@ -299,7 +299,7 @@ const App = () => {
           </div>
 
           <div className="text-gray-500 text-sm">
-            &copy; 2023 MT Health. All rights reserved.
+            &copy; 2023 Xinyue Health. All rights reserved.
           </div>
         </div>
       </footer>
