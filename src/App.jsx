@@ -85,10 +85,10 @@ const App = () => {
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <img 
               src={assets.logo} 
-              alt="MT Logo" 
+              alt="Xinyue Logo" 
               className="w-10 h-10 rounded-full shadow-sm object-cover"
             />
-            <span className="text-2xl font-bold text-gray-800 tracking-tight">MT</span>
+            <span className="text-2xl font-bold text-gray-800 tracking-tight">Xinyue</span>
           </div>
           
           <div className="hidden md:flex items-center gap-8">
@@ -115,7 +115,7 @@ const App = () => {
             <span className="text-sky-500">Mind Nurtured.</span>
           </h1>
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-200">
-            倾听你的心声，抚慰你的心灵。MT 结合先进 AI 技术与专业心理学，
+            倾听你的心声，抚慰你的心灵。Xinyue 结合先进 AI 技术与专业心理学，
             在那些感到压力的时刻，为你提供一个温暖的出口。
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 animate-fade-in-up delay-300">
@@ -138,7 +138,7 @@ const App = () => {
       <section id="features" className="py-24 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">为什么选择 MT？</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">为什么选择 Xinyue？</h2>
             <p className="text-gray-600">三大核心功能，不仅是工具，更是你口袋里的心理咨询师。</p>
           </div>
 
